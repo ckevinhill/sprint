@@ -1,0 +1,35 @@
+name: Build and deploy to Cloudflare Pages
+
+defaults:
+  run:
+    shell: bash
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+env:
+  CLOUDFLARE_ACCOUNT_ID: 49cabc337e68d68d97144f9456ce5ad8
+  CLOUDFLARE_PAGES_PROJECT: sprint
+
+jobs:
+  build-deploy:
+    name: Build and deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v4
+
+      - name: Build site
+        run: |
+          # Static site lives at the repo root (index.html + functions/).
+          # Nothing to build; stage the deployable files into ./out.
+          mkdir -p out
+          cp index.html out/
+          cp -r functions out/
+
+      - name: Deploy to Cloudflare Pages
+        run: npx -y wrangler@3 pages deploy ./out --project-name=${{ env.CLOUDFLARE_PAGES_PROJECT }} --commit-dirty=true
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
