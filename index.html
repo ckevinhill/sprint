@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Logan Sprint Training — sprint.ckhill.com</title>
+<meta name="description" content="Logan's 8-week soccer sprint training plan: sessions, drills with videos, form cues, solo test days, and progress log.">
+<style>
+  :root{--bg:#0b1220;--panel:#14213a;--panel2:#1a2c4d;--ink:#eef3ff;--mut:#9db1d6;--acc:#ffcf3f;--acc2:#37e39a;--danger:#ff6b6b;--line:#26385c}
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5}
+  header{padding:22px 18px 8px;max-width:880px;margin:0 auto}
+  h1{font-size:30px;margin:0 0 2px;letter-spacing:.3px}
+  h1 .bolt{color:var(--acc)}
+  .sub{color:var(--mut);font-size:15px}
+  #sync{display:inline-block;font-size:12px;padding:2px 10px;border-radius:20px;border:1px solid var(--line);color:var(--mut);margin-top:8px}
+  #sync.ok{color:var(--acc2);border-color:var(--acc2)}
+  nav{position:sticky;top:0;z-index:10;background:rgba(11,18,32,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+  nav .inner{max-width:880px;margin:0 auto;display:flex;gap:6px;padding:10px 12px;overflow-x:auto}
+  nav button{flex:1 0 auto;min-height:48px;padding:10px 14px;border-radius:12px;border:1px solid var(--line);background:var(--panel);color:var(--ink);font-size:16px;font-weight:600;cursor:pointer}
+  nav button.active{background:var(--acc);color:#141414;border-color:var(--acc)}
+  main{max-width:880px;margin:0 auto;padding:16px 14px 70px}
+  section{display:none} section.active{display:block}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px;margin:0 0 14px}
+  .card h2{margin:0 0 6px;font-size:21px}
+  .card h3{margin:14px 0 4px;font-size:17px;color:var(--acc)}
+  .tag{display:inline-block;background:var(--panel2);border:1px solid var(--line);color:var(--acc);font-size:12px;font-weight:700;padding:2px 9px;border-radius:20px;margin:0 6px 6px 0;text-transform:uppercase;letter-spacing:.6px}
+  .cue{background:#22355c;border-left:4px solid var(--acc);padding:10px 12px;border-radius:8px;margin:10px 0}
+  .warn{border-left-color:var(--danger);background:#3a2230}
+  ul,ol{margin:6px 0 8px;padding-left:22px}
+  li{margin:3px 0}
+  .mut{color:var(--mut)} .small{font-size:13px}
+  .btn{display:inline-block;min-height:48px;padding:12px 18px;border-radius:12px;border:none;background:var(--acc);color:#141414;font-size:16px;font-weight:700;cursor:pointer;text-decoration:none;text-align:center}
+  .btn.ghost{background:var(--panel2);color:var(--ink);border:1px solid var(--line)}
+  .btn.danger{background:var(--danger);color:#141414}
+  .grid{display:grid;grid-template-columns:1fr;gap:12px}
+  @media(min-width:640px){.grid{grid-template-columns:1fr 1fr}}
+  .vid{position:relative;padding-top:56.25%;border-radius:12px;overflow:hidden;background:#000;margin:8px 0}
+  .vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  label{display:block;font-size:14px;color:var(--mut);margin:10px 0 4px}
+  input,select,textarea{width:100%;min-height:48px;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--panel2);color:var(--ink);font-size:16px}
+  textarea{min-height:64px}
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  th,td{border-bottom:1px solid var(--line);padding:8px 6px;text-align:left}
+  th{color:var(--mut);font-weight:600}
+  .pb{font-size:26px;font-weight:800;color:var(--acc2)}
+  .row{display:flex;gap:10px;flex-wrap:wrap}.row>*{flex:1}
+  canvas{width:100%;height:220px;background:var(--panel2);border-radius:12px}
+  .check li{margin:6px 0}
+  footer{max-width:880px;margin:0 auto;padding:0 18px 40px;color:var(--mut);font-size:13px}
+</style>
+</head>
+<body>
+<header>
+  <h1><span class="bolt">⚡</span> Logan Sprint Training</h1>
+  <div class="sub">8-week soccer speed plan · Mon / Wed / Fri · 25–35 min · Train fast, rest fully, stop if it hurts.</div>
+  <div><span id="sync">connecting…</span></div>
+</header>
+<nav><div class="inner">
+  <button data-tab="week" class="active">This Week</button>
+  <button data-tab="drills">Drills</button>
+  <button data-tab="form">Form</button>
+  <button data-tab="test">Test Day</button>
+  <button data-tab="log">Log &amp; PBs</button>
+</div></nav>
+<main>
+
+<section id="week" class="active">
+  <div class="card">
+    <div id="weekHead"></div>
+    <div class="cue" id="weekCue"></div>
+    <p class="small mut">Every session starts with the standard warmup (below). Full recoveries between reps — walk back slowly and wait until your breathing is normal, plus ~30 seconds. If form falls apart, you're done for the day. That's real speed training.</p>
+  </div>
+  <div class="card">
+    <h2>Standard Warmup (every session, ~8 min)</h2>
+    <ol>
+      <li>Easy jog — 2 lengths of the field (or 1 minute)</li>
+      <li>Walking lunges — 10 steps, tall chest</li>
+      <li>Leg swings — 10 front-to-back + 10 side-to-side, each leg</li>
+      <li>A-march — 2 × 15 m</li>
+      <li>A-skip — 2 × 15 m</li>
+      <li>High knees — 1 × 15 m easy (70%), 1 × 15 m quick (90%)</li>
+      <li>Build-ups — 2 × 30 m, smooth to ~85–90% by the end</li>
+    </ol>
+    <p class="small mut">Cool-down: walk 1 minute, calf + quad stretch 20 sec each side. All drills done over 15–20 m with a walk back.</p>
+  </div>
+  <div id="weekSessions"></div>
+  <div class="card">
+    <h3>Game this week?</h3>
+    <p>Game tomorrow → move or drop today's session. Game today → the game <em>is</em> training, skip the session. Hard soccer practice today → skip or do warmup + form drills only. Missed a week? Repeat the last week you finished.</p>
+    <div style="display:flex;gap:8px;margin-top:8px">
+      <button class="btn ghost" id="prevWeek">← Prev week</button>
+      <button class="btn ghost" id="nextWeek">Next week →</button>
+    </div>
+  </div>
+</section>
+
+<section id="drills">
+  <div class="card"><h2>Drill Library</h2><p class="mut">Watch the video, read the cues, then do it. Every drill tells you how to set it up and measure it by yourself.</p></div>
+  <div id="drillList"></div>
+</section>
+
+<section id="form">
+  <div class="card">
+    <h2>Sprint Form — The 5 Big Ideas</h2>
+    <div class="vid"><iframe src="https://www.youtube.com/embed/U0JjbMMTOmw" title="Sprinting Drills That Develop Proper Form — Outperform" loading="lazy" allowfullscreen></iframe></div>
+    <p class="small mut">Video: “Sprinting Drills That Develop Proper Form” — Outperform</p>
+    <h3>1. Posture — “Run tall”</h3>
+    <p>Head neutral, eyes ahead, chest up, hips tall. One straight line from head to foot. Don't lean back, and don't fold at the waist like you're sitting in a chair.</p>
+    <h3>2. Arms — “Cheek to pocket”</h3>
+    <p>Elbows bent about 90°. Hands swing from cheek height down past your pocket. Front-to-back only — arms crossing your body twists you and wastes speed. Shoulders down, hands relaxed (no tight fists).</p>
+    <h3>3. Foot strike — “Strike under your hips”</h3>
+    <p>Land on the ball of your foot, and land <em>under</em> you. Reaching your foot out in front is hitting the brakes on every step. Keep your toe pulled up as the leg comes through.</p>
+    <h3>4. Front-side mechanics — “Knee up, foot down”</h3>
+    <p>The power happens in front of your body. Drive your knee up toward hip height, step over the other knee, then snap the foot straight down under your hips. Push the ground away behind you.</p>
+    <h3>5. Start lean — “Fall, then push”</h3>
+    <p>On your first steps your whole body leans forward like a falling plank — straight line head-to-heel, pushing the ground <em>back</em>. Stand taller little by little over the first 10–15 m. Don't pop straight up on step 1.</p>
+    <div class="vid"><iframe src="https://www.youtube.com/embed/VuHGDuvTx9A" title="Best Sprinting Mechanics To Run Faster — Performance Lab" loading="lazy" allowfullscreen></iframe></div>
+    <p class="small mut">Video: “Best Sprinting Mechanics To Run Faster” — Performance Lab of California</p>
+  </div>
+  <div class="card">
+    <h2>Self-Check on Video 🎥</h2>
+    <p>Once a week, prop your phone side-on and film 1–2 sprints. Watch in slow motion and check:</p>
+    <ul class="check">
+      <li>☐ Am I tall, or leaning back / sitting down?</li>
+      <li>☐ Do my hands go cheek-to-pocket, front-to-back?</li>
+      <li>☐ Does my foot land under my hips, not out in front?</li>
+      <li>☐ Does my knee drive up before the foot snaps down?</li>
+      <li>☐ On starts: is my body one straight leaning line?</li>
+      <li>☐ Do I look relaxed at top speed (face, shoulders, hands)?</li>
+    </ul>
+    <p class="small mut">Pick ONE thing to fix next session. Not five. One.</p>
+  </div>
+</section>
+
+<section id="test">
+  <div class="card">
+    <h2>Test Day — Time Yourself With Your Phone 📱</h2>
+    <p><strong>When:</strong> Friday of Weeks 2, 4, 6 and 8, at the football field. Regular training days are <strong>never</strong> timed.</p>
+    <h3>Set up</h3>
+    <ol>
+      <li>Distances: <strong>10 m, 20 m, 30 m</strong>, a <strong>flying 10 m</strong> zone, and a line for the <strong>broad jump</strong>.</li>
+      <li>On a football field use the yard lines: 10 m ≈ 11 yards, 20 m ≈ 22 yards, 30 m ≈ 33 yards. Mark start and finish with cones/shoes you can see on video. Use the <em>same</em> setup every test day.</li>
+      <li>Prop your phone side-on to the <strong>finish line</strong>, landscape, far enough back to see the whole run. A backpack or small tripod works.</li>
+      <li>Use <strong>slow-motion 240 fps</strong> if your phone has it. Otherwise 60 fps is good, 30 fps is OK.</li>
+    </ol>
+    <h3>Run it</h3>
+    <ol>
+      <li>Full warmup. Hit record, walk to the start, stand still for 2 seconds, then sprint <em>through</em> the finish line.</li>
+      <li><strong>3 attempts</strong> at each distance, 2–3 minutes rest between attempts.</li>
+      <li>Broad jump: toes behind the line, jump far, stick the landing, measure to the back of your heels. 3 attempts, best one counts.</li>
+    </ol>
+    <h3>Count the frames</h3>
+    <ol>
+      <li>Scrub the video frame by frame. <strong>Start frame</strong> = first frame any part of you moves.</li>
+      <li><strong>Finish frame</strong> = frame where your <strong>chest</strong> crosses the finish line (not a hand or foot).</li>
+      <li><strong>Time = (finish frame − start frame) ÷ fps.</strong> Example: 97 frames at 30 fps = 3.23 s.</li>
+      <li>Accuracy: 30 fps ≈ ±0.03 s · 60 fps ≈ ±0.017 s · 240 fps ≈ ±0.004 s.</li>
+      <li>Log the <strong>middle</strong> of your 3 times — that's your honest number. Flying 10 m: put the phone side-on midway through the zone and time chest-in to chest-out of the zone the same way.</li>
+    </ol>
+    <div class="cue warn"><strong>Same field, same shoes, same setup every time</strong> — that's what makes the numbers mean something. Then log them in the Log tab and watch the chart.</div>
+  </div>
+</section>
+
+<section id="log">
+  <div class="card">
+    <h2>Personal Bests 🏆</h2>
+    <div class="grid" id="pbs"></div>
+  </div>
+  <div class="card">
+    <h2>Progress Chart</h2>
+    <label for="chartMetric">Test</label>
+    <select id="chartMetric">
+      <option value="t10">10 m (s) — lower is better</option>
+      <option value="t20">20 m (s) — lower is better</option>
+      <option value="t30">30 m (s) — lower is better</option>
+      <option value="fly10">Flying 10 m (s) — lower is better</option>
+      <option value="broad">Broad jump — higher is better</option>
+    </select>
+    <canvas id="chart" width="800" height="440"></canvas>
+    <p class="small mut" id="chartNote"></p>
+  </div>
+  <div class="card">
+    <h2>Log a Session</h2>
+    <label>Date</label><input type="date" id="sDate">
+    <div class="row">
+      <div><label>Session type</label><select id="sType"><option>Monday — Acceleration</option><option>Wednesday — Max Speed + Form</option><option>Friday — Soccer Speed / COD</option><option>Test Day</option><option>Other</option></select></div>
+      <div><label>Completed?</label><select id="sDone"><option value="1">Yes — done</option><option value="0">Partial / skipped</option></select></div>
+      <div><label>RPE — how hard? (1–10)</label><input type="number" id="sRpe" min="1" max="10" step="1" value="6"></div>
+    </div>
+    <label>Notes (one line is plenty)</label><textarea id="sNotes" placeholder="e.g. starts felt fast / left hamstring a bit tight"></textarea>
+    <p><button class="btn" id="saveSession">Save session</button></p>
+    <div id="sessionList"></div>
+  </div>
+  <div class="card">
+    <h2>Log a Test Result</h2>
+    <label>Date</label><input type="date" id="tDate">
+    <div class="row">
+      <div><label>Test</label><select id="tMetric"><option value="t10">10 m time (s)</option><option value="t20">20 m time (s)</option><option value="t30">30 m time (s)</option><option value="fly10">Flying 10 m time (s)</option><option value="broad">Broad jump</option></select></div>
+      <div><label id="tValLabel">Value (seconds, e.g. 2.05)</label><input type="number" id="tVal" step="0.01" min="0" placeholder="0.00"></div>
+    </div>
+    <p class="small mut">Broad jump: enter the number and keep the same unit every time (inches or cm — pick one and stick with it).</p>
+    <p><button class="btn" id="saveTest">Save test result</button></p>
+    <div id="testList"></div>
+  </div>
+</section>
+
+</main>
+<footer>Built for Logan · Oct 2026 · Full written plan: Logan-Sprint-Plan.md (ask Dad) · Stop any session if something hurts — especially back or hamstring — and tell a parent the same day.</footer>
+
+<script>
+const START = new Date('2026-10-26T00:00:00'); // Week 1 Monday
+const PHASES = ['Learn','Learn → Test','Build','Build → Test','Build','Push → Test','Push','Test + Deload'];
+const CUES = [
+ 'Posture + arms — “Tall, cheek-to-pocket.”',
+ 'Start lean — “Fall as a plank, push the ground back.”',
+ 'Foot strike — “Don’t reach — strike under you.”',
+ 'Front-side — “Knee up, foot down.”',
+ 'Everything together — “Fast and loose.”',
+ 'Front-side at top speed — “Knee up, foot down… at full speed.”',
+ 'Reactive speed — react, then go. One cue: “See it, chase it.”',
+ 'Your week — pick your ONE best cue each day.'];
+const WEEKS = [
+ {mon:['Wall drives 2×5/leg slow + 2×3/leg fast switches','Falling starts 4 × 10 m','Standing-start sprints 4 × 15 m (≈100 m total)'],
+  wed:['Form set ×2: A-march, A-skip, high knees, straight-leg bounds — 2 × 20 m each','Flying 10 m × 4 (15 m build-up), rest 2 min'],
+  fri:['Deceleration stops 4 × 10 m — stop in 3 steps, stick 2 sec','5-10-5 shuttle × 4 at ~85% (learn the turns)','Curved sprints 4 × 15 m']},
+ {mon:['Wall drives as Week 1','Half-kneeling starts 3/leg × 10 m','Standing-start sprints 5 × 15 m'],
+  wed:['Form set ×2','Flying 10 m × 5, rest 2–3 min','Pogo hops 2 × 10 — quiet landings'],
+  fri:['⭐ TEST DAY #1 (baseline): 10 m ×3, 20 m ×3, 30 m ×3 — video timed','Broad jump × 3 — log everything on the Log tab']},
+ {mon:['Wall drives (fast switches)','Falling starts 3 × 10 m + 3-point starts 3 × 10 m','Sprints 5 × 20 m · Broad jump 3 × 2'],
+  wed:['Form set ×2','Flying 10 m × 4 + Flying 20 m × 2, rest 3 min','Pogo hops 2 × 10'],
+  fri:['Deceleration stops 5 × 10 m','5-10-5 × 5 at 95%','Sprint-turn-sprint 4 × (10 m + turn + 10 m)']},
+ {mon:['Wall drives','Half-kneeling starts 3/leg × 10 m','3-point starts 4 × 15 m + sprints 4 × 20 m · Broad jump 3 × 2'],
+  wed:['Form set ×2','Flying 20 m × 4, rest 3 min','Sprint-float-sprint × 3 · Pogo hops 2 × 12'],
+  fri:['⭐ TEST DAY #2: 10/20/30 m, flying 10 m, broad jump — same setup as Week 2']},
+ {mon:['Wall drives','Rotate all 3 starts, 2 each × 10–15 m','Sprints 6 × 20 m · Broad jump 3 × 2'],
+  wed:['Form set ×2','Flying 20 m × 5, rest 3 min','Sprint-float-sprint × 3 · Pogo hops 2 × 12'],
+  fri:['Deceleration stops 6 × 10 m','5-10-5 × 6 at 100%, full rest','Ball work: 4 × (20 m dribble at 80% → 10 m sprint without the ball)']},
+ {mon:['Wall drives','3-point starts 5 × 15 m','Sprints 5 × 20 m · Broad jump 3 × 3'],
+  wed:['Form set ×2 — shorter, sharper','Flying 20 m × 5, rest 3 min','Sprint-float-sprint × 4 · Pogo hops 2 × 12'],
+  fri:['⭐ TEST DAY #3: full battery — 10/20/30 m, flying 10 m, broad jump']},
+ {mon:['Wall drives','Reactive falling starts 4 × 10 m (drop a ball / timer beep — react & go)','Sprints 6 × 20 m from mixed starts · Broad jump 3 × 3'],
+  wed:['Form set ×2','Flying 20 m × 5','Sprint-float-sprint × 4 · Pogo hops 2 × 12'],
+  fri:['Deceleration stops 6 × 10 m','5-10-5 × 6','Reactive sprint-turn-sprint × 5 — hardest week: cut reps, not corners']},
+ {mon:['LIGHT: Wall drives (easy)','3 easy starts × 10 m','3 × 20 m at 90–95%, perfect form — done in ~20 min'],
+  wed:['LIGHT: Form set ×1–2','Flying 10 m × 3 — crisp and relaxed. No finisher.'],
+  fri:['⭐ FINAL TEST DAY: full battery, same setup as Week 2. Log it, compare with your baseline, celebrate — then take 3–4 days off sprinting.']}
+];
+const DRILLS = [
+ {n:'Wall Drives',p:'Learn the leaning, pushing shape of your first steps — without moving.',setup:'Find a wall, fence or tree. Hands flat at shoulder height, walk your feet back until your body is one straight line leaning ~45°.',steps:['Lean in: head-to-heel straight line, up on the balls of your feet.','March: drive one knee up, toe up, hold 1 second. Down. Other leg.','Fast switches: swap legs in one quick move, then freeze. Stay a plank — no bending at the waist.'],cues:['“Straight line, head to heel”','“Push the ground back”','“Toe up”'],mistakes:['Bending at the hips','Letting the heel drop flat','Rushing the slow march'],dose:'2 × 5/leg slow march + 2 × 3/leg fast switches',v:'MFD6vjbh09Q',vt:'3 Key Sprinting Wall Drills — Les Spellman'},
+ {n:'A-March',p:'The basic sprint shape, slowed down: posture, knee drive, opposite arm and leg.',setup:'Mark 15–20 m on the field. Walk back between reps.',steps:['Stand tall, march forward driving one knee to hip height.','Toe pulled up, foot lands under your hips on the ball of the foot.','Opposite arm swings cheek-to-pocket with each step.'],cues:['“Tall and proud”','“Step over the knee”','“Cheek to pocket”'],mistakes:['Leaning back to lift the knee','Same-side arm and leg','Landing on your heels'],dose:'2 × 15–20 m',v:'4xzkpuKyUHk',vt:'A-March — SimpliFaster'},
+ {n:'A-Skip',p:'A-march with rhythm and bounce — builds springy, quick ground contacts.',setup:'Same 15–20 m lane. Master the A-march first.',steps:['Skip forward: drive the knee up like the A-march, with a small hop on the standing leg.','Land, and the other knee drives up. Keep the rhythm: skip-skip-skip.','Arms match the legs, cheek-to-pocket.'],cues:['“Knee up, toe up”','“Light and springy”','“Strike under you”'],mistakes:['Turning it into a big leaping skip','Sitting back/down','Arms crossing the body'],dose:'2 × 15–20 m',v:'0fz4tO3IDzU',vt:'How To A Skip — Chari Hawkins (Olympian)'},
+ {n:'High Knees (with form)',p:'Fast, tall knee drive — front-side mechanics at speed.',setup:'15–20 m lane. Start at ~70% in Week 1 warmups, build to 90%.',steps:['Run with quick steps, driving knees toward hip height.','Stay tall — chest up, no leaning back.','Feet strike under your hips, quick off the ground.'],cues:['“Tall”','“Knees up, feet quick”','“Cheek to pocket”'],mistakes:['Leaning back','Slow, heavy steps','Looking at the ground'],dose:'2 × 15–20 m',v:'m1numnKLrG8',vt:'High Knees | Sprinting Drills — Sprinting Workouts'},
+ {n:'Falling Start',p:'Feel the acceleration lean: let gravity start you, then push.',setup:'Flat ground, 10–15 m of space. Feet together or slightly staggered.',steps:['Stand tall on the balls of your feet, body stiff as a plank.','Lean forward slowly as one piece until you HAVE to step.','Explode: drive the knee, push the ground back, sprint 10–15 m, easing taller as you go.'],cues:['“Fall as a plank”','“Push the ground back”','“Don’t pop up”'],mistakes:['Bending at the waist instead of leaning whole-body','Stepping too early (no lean)','Standing straight up on step 1'],dose:'3–4 × 10–15 m, full rest',v:'Q9w3PZ5kq5I',vt:'Falling Start Sprint — Championship Productions'},
+ {n:'Half-Kneeling Start',p:'Builds a powerful first step and forward push from a dead stop.',setup:'One knee on the ground (use grass), other foot flat in front, like a lunge frozen at the bottom.',steps:['Front foot flat, chest over your front knee, weight forward.','Push hard through the front foot and drive the back knee through.','Sprint 10 m, staying low and pushing back for the first steps.'],cues:['“Push, don’t stand up”','“Drive the back knee through”','“Stay low, push back”'],mistakes:['Rocking backward first','Standing up before pushing','First step too long/reachy'],dose:'3 per leg × 10 m',v:'I2w5ACABcvc',vt:'Hockey Speed Workout (half-kneeling starts) — Hockey Training'},
+ {n:'3-Point Start',p:'Football-style start: one hand down, loaded like a spring — maximum first-step power.',setup:'Staggered feet, front hand on the ground between them, hips up, eyes down-ish.',steps:['Set: weight forward over your hand, back flat, hips high.','First move: rip the hand back to your pocket and drive the back knee through.','Push the ground back for 10–15 m, rising gradually.'],cues:['“Loaded spring”','“Rip the hand back”','“Push back, stay low”'],mistakes:['Sitting back on the start','Popping straight up','Hands/arms crossing'],dose:'3–5 × 10–15 m, full rest',v:'lsjeKndtFe4',vt:'10 Meter Crouch Start Drill — Trackwired'},
+ {n:'Flying 10 / Flying 20',p:'True top speed. You build up first, so the timed/fast zone is pure max velocity — tall and relaxed.',setup:'3 markers: start, zone-in, zone-out. Build-up ~15–20 m, flying zone 10 m (later 20 m), then lots of slow-down room.',steps:['Build speed smoothly through the build-up — don’t sprint the first steps.','Hit the zone already fast. Run TALL and relaxed through it.','Run through the far marker, then slow down gradually over 15–20 m.'],cues:['“Fast and loose”','“Tall, strike under you”','“Run through the line”'],mistakes:['Trying to “go harder” inside the zone (you’ll tense up and slow down)','Stopping right at the finish marker','Short rests — this needs 2–3 min'],dose:'4–5 reps, rest 2–3 min',v:'VuHGDuvTx9A',vt:'Best Sprinting Mechanics To Run Faster — Performance Lab'},
+ {n:'Sprint–Float–Sprint',p:'Soccer speed: fast, relax without slowing much, then fast again — like bursting past a defender twice.',setup:'Markers at 0, 15, 25, 35 m (adjust to the week’s plan).',steps:['Sprint the first zone at ~95%.','Float zone: keep your speed but relax — face, shoulders, hands loose, slightly less force.','Sprint the last zone at ~95–100%. Slow down gradually.'],cues:['“Fast — loose — fast”','“Float tall”','“Relax the face”'],mistakes:['Actually jogging the float','Tensing up on the second sprint','Cutting the rest short'],dose:'3–4 reps, rest 3 min',v:'qmgGXYgwohc',vt:'Acceleration Day: Position • Project • Push — UFL / speed session breakdown'},
+ {n:'Straight-Leg Bounds & Pogo Hops',p:'Springy ankles and stiff, quick ground contacts — the “bounce” in fast running. Low volume only.',setup:'Flat grass. Pogos: in place. Bounds: 15–20 m lane, tall posture, legs nearly straight, small and springy.',steps:['Pogos: bounce on the balls of your feet, ankles springy, minimal knee bend, quiet landings.','Bounds: bound forward from foot to foot with straight-ish legs, toe up, landing under you.','Keep both SHORT and bouncy — quality over height.'],cues:['“Quiet feet”','“Springy, not jumpy”','“Tall”'],mistakes:['Loud, flat-footed landings','Knees caving in','Turning pogos into big jumps'],dose:'Pogos 2 × 10–12 · Bounds 2 × 15–20 m',v:'Qi95GCkVWkw',vt:'Plyometric Jumps & Sprint Drills for Youth Athletes — Pierre’s Elite Performance'},
+ {n:'Broad Jump',p:'Two-foot horizontal power — a simple test of how much force you can put into the ground. Also a test-day event.',setup:'A line on the ground (or the edge of a yard line). Measure from the line to the back of your heels.',steps:['Feet hip-width, toes behind the line. Swing arms back, load your hips.','Explode up and out, swinging arms through.','Land on both feet, stick it — knees soft, no falling backward (a fall-back doesn’t count).'],cues:['“Load and explode”','“Jump OUT, not just up”','“Stick the landing”'],mistakes:['Landing with straight legs','Falling backward','No arm swing'],dose:'3 × 2–3, full rest',v:'R0mlgKzfxbQ',vt:'Plyometric Progression for Explosive Agility — Overtime Athletes'},
+ {n:'5-10-5 Shuttle & Deceleration Stops',p:'Soccer is start-stop-turn. Stops teach you to brake safely; the 5-10-5 teaches fast turns.',setup:'3 markers in a line, 5 m apart (middle = start). For stops: just one marker 10 m away.',steps:['Decel stop: sprint 10 m, brake inside 3 steps, stick for 2 seconds — hips low, knees tracking over toes.','5-10-5: from the middle, sprint 5 m right, touch/turn, sprint 10 m left, turn, sprint 5 m through the middle.','Turns: plant the OUTSIDE foot, drop your hips, turn your hips first.'],cues:['“Low hips to stop/turn”','“Plant outside, push”','“Hips turn first”'],mistakes:['Stopping bolt-upright (hard on knees/back)','Rounding the turns wide','Crossing your feet when turning'],dose:'Stops 4–6 × 10 m · 5-10-5 × 4–6, full rest',v:'aZ-6FsvVoAs',vt:'Agility Drill: Backpedal & Acceleration (deceleration/transition) — CrossFit Waukee'}
+];
+</script>
+<script>
+// ---------- Tabs ----------
+document.querySelectorAll('nav button').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('nav button').forEach(x=>x.classList.remove('active')); b.classList.add('active');
+  document.querySelectorAll('main section').forEach(s=>s.classList.remove('active'));
+  document.getElementById(b.dataset.tab).classList.add('active');
+  if(b.dataset.tab==='log') renderLog();
+}));
+// ---------- Week view ----------
+function currentWeek(){
+  const days=Math.floor((Date.now()-START.getTime())/86400000);
+  return Math.min(8,Math.max(1,Math.floor(days/7)+1));
+}
+let viewWeek=currentWeek();
+function fmtDate(d){return d.toLocaleDateString('en-US',{month:'short',day:'numeric'});}
+function renderWeek(){
+  const w=WEEKS[viewWeek-1];
+  const mon=new Date(START); mon.setDate(mon.getDate()+(viewWeek-1)*7);
+  const fri=new Date(mon); fri.setDate(fri.getDate()+4);
+  document.getElementById('weekHead').innerHTML=
+    `<h2>Week ${viewWeek} of 8 — ${PHASES[viewWeek-1]}</h2><div class="mut">${fmtDate(mon)} – ${fmtDate(fri)} ${viewWeek===currentWeek()?'· <strong style="color:var(--acc2)">THIS WEEK</strong>':''}</div>`;
+  document.getElementById('weekCue').innerHTML=`<strong>Form focus:</strong> ${CUES[viewWeek-1]}`;
+  const day=(name,list)=>`<div class="card"><h2>${name}</h2><ul>${list.map(x=>`<li>${x}</li>`).join('')}</ul><p class="small mut">Warmup first. Full recoveries. Log it after.</p></div>`;
+  document.getElementById('weekSessions').innerHTML=
+    day('Monday — Acceleration ⚡',w.mon)+day('Wednesday — Max Speed + Form 🏃',w.wed)+day('Friday — '+(PHASES[viewWeek-1].includes('Test')&&viewWeek>1||[2,4,6,8].includes(viewWeek)?'Test Day ⭐ / Soccer Speed':'Soccer Speed ⚽'),w.fri);
+}
+document.getElementById('prevWeek').onclick=()=>{viewWeek=Math.max(1,viewWeek-1);renderWeek();};
+document.getElementById('nextWeek').onclick=()=>{viewWeek=Math.min(8,viewWeek+1);renderWeek();};
+renderWeek();
+// ---------- Drills ----------
+document.getElementById('drillList').innerHTML=DRILLS.map(d=>`
+ <div class="card"><h2>${d.n}</h2><p>${d.p}</p>
+ <div class="vid"><iframe src="https://www.youtube.com/embed/${d.v}" title="${d.vt}" loading="lazy" allowfullscreen></iframe></div>
+ <p class="small mut">Video: ${d.vt}</p>
+ <h3>Setup</h3><p>${d.setup}</p>
+ <h3>How to do it</h3><ol>${d.steps.map(s=>`<li>${s}</li>`).join('')}</ol>
+ <div class="cue"><strong>Cues:</strong> ${d.cues.join(' · ')}</div>
+ <h3>Common mistakes</h3><ul>${d.mistakes.map(s=>`<li>${s}</li>`).join('')}</ul>
+ <p><span class="tag">${d.dose}</span></p></div>`).join('');
+// ---------- Log: localStorage cache + D1 sync ----------
+const LS='sprint-log-v1';
+let state={sessions:[],tests:[]};
+try{state=JSON.parse(localStorage.getItem(LS))||state;}catch(e){}
+const syncEl=document.getElementById('sync');
+function setSync(ok,msg){syncEl.textContent=msg;syncEl.className=ok?'ok':'';syncEl.id='sync';}
+function saveLocal(){localStorage.setItem(LS,JSON.stringify(state));}
+async function api(path,opts){
+  const r=await fetch('/api/'+path,opts); if(!r.ok) throw new Error(r.status); return r.json();
+}
+async function refresh(){
+  try{
+    const s=await api('state');
+    const localS=state.sessions, localT=state.tests;
+    state.sessions=s.sessions||[]; state.tests=s.tests||[];
+    // overlay local-only entries (offline writes) and push them up
+    for(const x of localS) if(!state.sessions.find(y=>y.id===x.id)){state.sessions.push(x); pushSession(x);}
+    for(const x of localT) if(!state.tests.find(y=>y.id===x.id)){state.tests.push(x); pushTest(x);}
+    saveLocal(); setSync(true,'✓ saved & synced'); renderLog();
+  }catch(e){ setSync(false,'offline — saving on this device'); }
+}
+async function pushSession(x){ try{ await api('session',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(x)}); setSync(true,'✓ saved & synced'); }catch(e){ setSync(false,'offline — saving on this device'); } }
+async function pushTest(x){ try{ await api('test',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(x)}); setSync(true,'✓ saved & synced'); }catch(e){ setSync(false,'offline — saving on this device'); } }
+const uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,7);
+const todayStr=()=>{const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');};
+document.getElementById('sDate').value=todayStr(); document.getElementById('tDate').value=todayStr();
+const METRICS={t10:'10 m',t20:'20 m',t30:'30 m',fly10:'Flying 10 m',broad:'Broad jump'};
+document.getElementById('saveSession').onclick=()=>{
+  const x={id:uid(),date:document.getElementById('sDate').value||todayStr(),dayType:document.getElementById('sType').value,completed:document.getElementById('sDone').value==='1',rpe:Math.min(10,Math.max(1,parseInt(document.getElementById('sRpe').value)||6)),notes:document.getElementById('sNotes').value.slice(0,300)};
+  state.sessions.push(x); saveLocal(); pushSession(x); document.getElementById('sNotes').value=''; renderLog();
+};
+document.getElementById('saveTest').onclick=()=>{
+  const v=parseFloat(document.getElementById('tVal').value); if(!v||v<=0){alert('Enter a value first');return;}
+  const x={id:uid(),date:document.getElementById('tDate').value||todayStr(),metric:document.getElementById('tMetric').value,value:v};
+  state.tests.push(x); saveLocal(); pushTest(x); document.getElementById('tVal').value=''; renderLog();
+};
+async function del(kind,id){
+  if(kind==='session'){state.sessions=state.sessions.filter(x=>x.id!==id);}else{state.tests=state.tests.filter(x=>x.id!==id);}
+  saveLocal(); renderLog();
+  try{ await api(kind+'?id='+encodeURIComponent(id),{method:'DELETE'}); setSync(true,'✓ saved & synced'); }catch(e){ setSync(false,'offline — delete not synced'); }
+}
+function renderLog(){
+  const pb=document.getElementById('pbs');
+  pb.innerHTML=Object.keys(METRICS).map(m=>{
+    const vals=state.tests.filter(t=>t.metric===m).map(t=>t.value);
+    const best=vals.length?(m==='broad'?Math.max(...vals):Math.min(...vals)):null;
+    return `<div class="card" style="margin:0"><div class="mut small">${METRICS[m]}${m==='broad'?'':' (seconds)'}</div><div class="pb">${best===null?'—':best}</div><div class="mut small">${vals.length} logged</div></div>`;
+  }).join('');
+  document.getElementById('sessionList').innerHTML=state.sessions.slice().sort((a,b)=>b.date.localeCompare(a.date)).slice(0,20).map(x=>
+    `<div style="border-bottom:1px solid var(--line);padding:8px 0">${x.completed?'✅':'◐'} <strong>${x.date}</strong> — ${x.dayType} · RPE ${x.rpe}${x.notes?` · <span class="mut">${x.notes}</span>`:''} <button class="btn ghost" style="min-height:36px;padding:4px 10px;font-size:13px;float:right" onclick="del('session','${x.id}')">delete</button></div>`).join('')||'<p class="mut">No sessions logged yet.</p>';
+  document.getElementById('testList').innerHTML=state.tests.slice().sort((a,b)=>b.date.localeCompare(a.date)).slice(0,30).map(x=>
+    `<div style="border-bottom:1px solid var(--line);padding:8px 0"><strong>${x.date}</strong> — ${METRICS[x.metric]}: <strong>${x.value}</strong> <button class="btn ghost" style="min-height:36px;padding:4px 10px;font-size:13px;float:right" onclick="del('test','${x.id}')">delete</button></div>`).join('')||'<p class="mut">No test results yet — first test day is Friday of Week 2.</p>';
+  drawChart();
+}
+function drawChart(){
+  const m=document.getElementById('chartMetric').value;
+  const pts=state.tests.filter(t=>t.metric===m).sort((a,b)=>a.date.localeCompare(b.date));
+  const c=document.getElementById('chart'),ctx=c.getContext('2d');
+  ctx.clearRect(0,0,c.width,c.height);
+  document.getElementById('chartNote').textContent=pts.length?pts.map(p=>`${p.date}: ${p.value}`).join('  ·  '):'No data for this test yet.';
+  if(pts.length<1) return;
+  const vals=pts.map(p=>p.value); let lo=Math.min(...vals),hi=Math.max(...vals); if(lo===hi){lo-=0.1;hi+=0.1;}
+  const pad=(hi-lo)*0.2; lo-=pad; hi+=pad;
+  const X=i=>60+(c.width-90)*(pts.length===1?0.5:i/(pts.length-1));
+  const Y=v=>c.height-40-(c.height-80)*((v-lo)/(hi-lo));
+  ctx.strokeStyle='#37e39a'; ctx.lineWidth=3; ctx.beginPath();
+  pts.forEach((p,i)=>{i?ctx.lineTo(X(i),Y(p.value)):ctx.moveTo(X(i),Y(p.value));}); ctx.stroke();
+  ctx.fillStyle='#ffcf3f'; pts.forEach((p,i)=>{ctx.beginPath();ctx.arc(X(i),Y(p.value),6,0,7);ctx.fill();
+    ctx.fillStyle='#eef3ff'; ctx.font='14px sans-serif'; ctx.fillText(p.value,X(i)-12,Y(p.value)-12); ctx.fillStyle='#ffcf3f';});
+}
+document.getElementById('chartMetric').onchange=drawChart;
+refresh();
+</script>
+</body>
+</html>
